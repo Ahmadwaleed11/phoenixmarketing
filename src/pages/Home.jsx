@@ -10,14 +10,14 @@ import Footer from '../components/common/Footer'
 function Home() {
   return (
     <>
-    <Navbar/>
+    
     <Hero/>
     <WeDo/>
     <Work/>
     <Pricing/>
     <Blog/>
     <FAQ/>
-    <Footer/>
+    
     </>
   )
 }
