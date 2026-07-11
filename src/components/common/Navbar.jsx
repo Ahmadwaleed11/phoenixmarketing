@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link, useLocation } from 'react-router-dom'; // Link import karo
+import { Link,useLocation } from 'react-router-dom'; 
+import { HashLink } from "react-router-hash-link";
 import { links } from "../../constant";
 
 function Navbar() {
@@ -26,16 +27,15 @@ function Navbar() {
 
             return (
               <li key={index} className="relative group">
-                <Link
-                  to={item.path} // Link mein path use karo
-                  className={`text-[16px] font-medium transition-colors duration-300 ${
+                <HashLink smooth to={item.path}
+                className={`text-[16px] font-medium transition-colors duration-300 ${
                     isActive
                       ? "text-[var(--button-color)]"
                       : "text-gray-800 group-hover:text-[var(--button-color)]"
                   }`}
                 >
-                  {item.name} {/* Yahan item.name render karo */}
-                </Link>
+                  {item.name}
+</HashLink>
                 {/* Animated underline */}
                 <span 
                   className={`absolute -bottom-1 left-0 h-0.5 bg-[var(--button-color)] transition-all duration-300 ease-out ${

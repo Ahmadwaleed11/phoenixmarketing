@@ -33,7 +33,7 @@ function FAQ() {
   };
 
   return (
-    <section className="w-full bg-white py-16 lg:py-20">
+    <section className="w-full bg-white py-16 lg:py-20" id="faq">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-3 lg:gap-16">
           {/* Left Side - FAQ Accordion */}

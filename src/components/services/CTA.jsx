@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { BsArrowRight } from 'react-icons/bs';
 
 function ServicesCTA() {
@@ -18,10 +19,11 @@ function ServicesCTA() {
               Book a free strategy call and let's map your growth from day one.
             </p>
 
-            <button className="group inline-flex items-center gap-2 bg-[var(--button-color)] text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-[0_0_25px_rgba(244,124,32,0.5)] hover:-translate-y-1 hover:scale-105">
+           <Link to='/contact'> <button className="group inline-flex items-center gap-2 bg-[var(--button-color)] text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-[0_0_25px_rgba(244,124,32,0.5)] hover:-translate-y-1 hover:scale-105">
               Start Now
               <BsArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
             </button>
+            </Link>
           </div>
         </div>
       </div>

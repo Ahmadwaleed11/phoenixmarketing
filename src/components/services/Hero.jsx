@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { BsArrowRight } from 'react-icons/bs';
 
 function ServicesHero() {
@@ -31,10 +32,10 @@ function ServicesHero() {
         </p>
 
         {/* CTA Button */}
-        <button className="group inline-flex items-center gap-2 bg-[var(--button-color)] text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-[0_0_20px_rgba(244,124,32,0.4)] hover:-translate-y-1">
+       <Link to="/portfolio"> <button className="group inline-flex items-center gap-2 bg-[var(--button-color)] text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-[0_0_20px_rgba(244,124,32,0.4)] hover:-translate-y-1">
           Explore Features
           <BsArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-        </button>
+        </button></Link>
       </div>
     </section>
   );

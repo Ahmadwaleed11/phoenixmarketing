@@ -1,5 +1,6 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -61,10 +62,10 @@ function WeDo() {
             </h2>
           </div>
 
-          <button className="group flex h-11 items-center justify-center gap-2 rounded-md border border-[var(--button-color)] px-6 text-sm font-semibold text-[var(--button-color)] transition-all duration-300 hover:bg-[var(--button-color)] hover:text-white hover:shadow-[0_0_20px_rgba(244,124,32,0.4)] hover:-translate-y-0.5">
+          <Link to="/services" className="group flex h-11 items-center justify-center gap-2 rounded-md border border-[var(--button-color)] px-6 text-sm font-semibold text-[var(--button-color)] transition-all duration-300 hover:bg-[var(--button-color)] hover:text-white hover:shadow-[0_0_20px_rgba(244,124,32,0.4)] hover:-translate-y-0.5">
             Explore All Services
             <BsArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-          </button>
+          </Link>
         </div>
 
         {/* Services Grid */}

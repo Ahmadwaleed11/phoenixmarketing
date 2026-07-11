@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const projects = [
   { id: 1, title: "Business Name", category: "Social Media Marketing" },
@@ -26,9 +27,9 @@ function Work() {
             </h2>
           </div>
 
-          <button className="group rounded border border-gray-300 px-5 py-2 text-sm font-medium text-gray-700 transition-all duration-300 hover:border-[var(--button-color)] hover:bg-[var(--button-color)] hover:text-white hover:shadow-lg hover:-translate-y-0.5">
+          <Link to="/portfolio"> <button className="group rounded border border-gray-300 px-5 py-2 text-sm font-medium text-gray-700 transition-all duration-300 hover:border-[var(--button-color)] hover:bg-[var(--button-color)] hover:text-white hover:shadow-lg hover:-translate-y-0.5">
             View All Projects
-          </button>
+          </button></Link>
         </div>
 
         {/* Projects Grid */}

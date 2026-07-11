@@ -9,11 +9,11 @@ function Hero() {
   return (
     <div className="relative w-full bg-white font-sans overflow-hidden px-4 sm:px-8 md:px-16 lg:px-20 pt-16 pb-12 flex flex-col justify-between select-none">
       
-      {/* 1. Top Right - Get Free Consultation Button with glow */}
+      
       <div className="absolute top-4 right-4 sm:right-8 md:right-16 lg:right-20 z-20">
         <button className="group relative bg-[#FF6600] text-white font-medium px-4 sm:px-6 py-2 sm:py-[11px] rounded-xl flex items-center gap-2 sm:gap-3 transition-all duration-300 text-[13px] sm:text-[15px] hover:shadow-[0_0_20px_rgba(255,102,0,0.4)] hover:scale-105 hover:-translate-y-0.5 overflow-hidden">
-          <span className="relative z-10 hidden sm:inline">Get Free Consultation</span>
-          <span className="relative z-10 sm:hidden">Free Consult</span>
+          <a href="/contact"><span className="relative z-10 hidden sm:inline">Get Free Consultation</span></a>
+          <a href="/contact"><span className="relative z-10 sm:hidden">Free Consult</span></a>
           <BsArrowRight className="relative z-10 text-base stroke-[0.5] transition-transform duration-300 group-hover:translate-x-1" />
           {/* Shimmer effect */}
           <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
@@ -53,14 +53,14 @@ function Hero() {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5">
             {/* Primary Button with fill effect */}
             <button className="group relative h-12 px-7 text-white bg-[#FF6600] font-semibold rounded-lg flex gap-4 justify-center items-center shadow-[0_4px_12px_rgba(255,102,0,0.2)] transition-all duration-300 hover:shadow-[0_8px_25px_rgba(255,102,0,0.35)] hover:-translate-y-1 overflow-hidden">
-              <span className="relative z-10">Our Services</span>
+              <a href="/services"><span className="relative z-10">Our Services</span></a>
               <BsArrowRight size={22} className="relative z-10 transition-transform duration-300 group-hover:translate-x-2" />
               <div className="absolute inset-0 bg-black/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </button>
             
             {/* Secondary Button with border animation */}
             <button className="group h-12 px-7 text-[#334155] font-semibold border-2 border-gray-300 rounded-lg flex gap-4 justify-center items-center bg-white transition-all duration-300 hover:border-[#FF6600] hover:text-[#FF6600] hover:shadow-lg hover:-translate-y-1">
-              <span>View Porfolio</span>
+              <a href="/portfolio"><span>View Porfolio</span></a>
               <BsArrowRight size={22} className="transition-transform duration-300 group-hover:translate-x-2" />
             </button>
           </div>
