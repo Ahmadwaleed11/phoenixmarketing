@@ -78,23 +78,23 @@ const servicesData = [
   },
   {
     icon: <MdOutlineAutoAwesome size={24} />,
-    title: "Business & AI Automation",
-    description: "Automate the busywork and scale operations effortlessly.",
+    title: "Video Editing & Post-Production",
+    description: "Creative, high-impact video editing for brands, creators, and businesses.",
     features: [
-      "Lead scoring workflows",
-      "Automated funnels",
-      "AI chat & CRM integration"
+      "Cinematic video editing",
+      "Reels, Shorts & TikTok videos",
+      "Motion graphics & visual effects"
     ],
     chartImage: "/chart-automation.jpg"
   },
   {
     icon: <MdOutlineAutoAwesome size={24} />,
-    title: "Business & AI Automation",
-    description: "Automate the busywork and scale operations effortlessly.",
+    title: "Social Media Content Design",
+    description: "Creative, scroll-stopping visuals designed to grow your brand and engage your audience.",
     features: [
-      "Lead scoring workflows",
-      "Automated funnels",
-      "AI chat & CRM integration"
+      "Custom social media posts",
+      "Carousel & story designs",
+      "Promotional & ad creatives"
     ],
     chartImage: "/chart-automation.jpg"
   }
