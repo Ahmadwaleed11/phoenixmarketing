@@ -75,6 +75,17 @@ const servicesData = [
       "AI chat & CRM integration"
     ],
     chartImage: "/chart-automation.jpg"
+  },
+  {
+    icon: <MdOutlineAutoAwesome size={24} />,
+    title: "Business & AI Automation",
+    description: "Automate the busywork and scale operations effortlessly.",
+    features: [
+      "Lead scoring workflows",
+      "Automated funnels",
+      "AI chat & CRM integration"
+    ],
+    chartImage: "/chart-automation.jpg"
   }
 ];
 
