@@ -1,7 +1,10 @@
+// src/pages/ContactPage.jsx
 import React, { useEffect, useMemo, useState } from "react";
 import { ArrowRight, Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import PageTransition from "../components/common/PageTransition";
+
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
 
 const ContactPage = () => {
   const location = useLocation();
@@ -17,6 +20,12 @@ const ContactPage = () => {
     website: "",
     service: "",
     message: "",
+  });
+
+  const [status, setStatus] = useState({
+    loading: false,
+    success: "",
+    error: "",
   });
 
   const planToService = (planName) => {
@@ -71,9 +80,51 @@ Please contact me with next steps.`;
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", { ...formData, selectedPlan, selectedCurrency, selectedPrice });
+
+    setStatus({ loading: true, success: "", error: "" });
+
+    const payload = {
+      ...formData,
+      selectedPlan,
+      selectedCurrency,
+      selectedPrice,
+    };
+
+    try {
+      const res = await fetch(`${API_BASE}/api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok || !data.ok) {
+        throw new Error(data.error || "Failed to send inquiry.");
+      }
+
+      setStatus({
+        loading: false,
+        success: "Inquiry sent! Check your email for our auto-reply confirmation.",
+        error: "",
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        website: "",
+        service: "",
+        message: "",
+      });
+    } catch (err) {
+      setStatus({
+        loading: false,
+        success: "",
+        error: err.message || "Network error. Please try again.",
+      });
+    }
   };
 
   return (
@@ -217,7 +268,10 @@ Please contact me with next steps.`;
             >
               <div className="pointer-events-none absolute inset-0">
                 <div className="absolute -top-24 left-1/3 h-72 w-72 rounded-full bg-[#F47C20]/25 blur-[120px] glow-drift" />
-                <div className="absolute -bottom-24 right-1/4 h-72 w-72 rounded-full bg-orange-600/20 blur-[120px] glow-drift" style={{ animationDelay: "0.8s" }} />
+                <div
+                  className="absolute -bottom-24 right-1/4 h-72 w-72 rounded-full bg-orange-600/20 blur-[120px] glow-drift"
+                  style={{ animationDelay: "0.8s" }}
+                />
                 <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(circle_at_center,_#F47C20_1px,_transparent_1px)] bg-[length:22px_22px]" />
               </div>
 
@@ -228,9 +282,23 @@ Please contact me with next steps.`;
                   </span>
                   <h2 className="text-3xl md:text-4xl font-bold text-white">Send an inquiry</h2>
                   <p className="mt-3 text-gray-400">
-                    {selectedPlan ? `Plan selected: ${selectedPlan}` : "The more detail you share, the better the plan we can suggest."}
+                    {selectedPlan
+                      ? `Plan selected: ${selectedPlan}`
+                      : "The more detail you share, the better the plan we can suggest."}
                   </p>
                 </div>
+
+                {/* Status Messages */}
+                {status.error && (
+                  <div className="mb-6 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+                    {status.error}
+                  </div>
+                )}
+                {status.success && (
+                  <div className="mb-6 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-200">
+                    {status.success}
+                  </div>
+                )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
@@ -244,6 +312,7 @@ Please contact me with next steps.`;
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Your Name"
+                        required
                         className="w-full bg-gray-900/50 border border-gray-800 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 outline-none focus:border-[#F47C20] focus:ring-2 focus:ring-[#F47C20]/25 transition-all duration-300 hover:border-gray-600"
                       />
                     </div>
@@ -258,6 +327,7 @@ Please contact me with next steps.`;
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="you@company.com"
+                        required
                         className="w-full bg-gray-900/50 border border-gray-800 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 outline-none focus:border-[#F47C20] focus:ring-2 focus:ring-[#F47C20]/25 transition-all duration-300 hover:border-gray-600"
                       />
                     </div>
@@ -288,7 +358,9 @@ Please contact me with next steps.`;
                         onChange={handleChange}
                         className="w-full bg-gray-900/50 border border-gray-800 rounded-xl px-4 py-3.5 text-white appearance-none outline-none focus:border-[#F47C20] focus:ring-2 focus:ring-[#F47C20]/25 transition-all duration-300 hover:border-gray-600 cursor-pointer"
                       >
-                        <option value="" disabled className="bg-gray-900 text-gray-500">Select a service</option>
+                        <option value="" disabled className="bg-gray-900 text-gray-500">
+                          Select a service
+                        </option>
                         <option value="seo" className="bg-gray-900">SEO Optimization</option>
                         <option value="ppc" className="bg-gray-900">PPC Advertising</option>
                         <option value="social" className="bg-gray-900">Social Media Marketing</option>
@@ -312,16 +384,20 @@ Please contact me with next steps.`;
                       value={formData.message}
                       onChange={handleChange}
                       rows={5}
+                      required
                       className="w-full bg-gray-900/50 border border-gray-800 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 outline-none focus:border-[#F47C20] focus:ring-2 focus:ring-[#F47C20]/25 transition-all duration-300 hover:border-gray-600 resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="btn-sheen group relative w-full overflow-hidden rounded-xl bg-[#F47C20] py-4 font-bold text-white shadow-xl shadow-orange-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-orange-500/30"
+                    disabled={status.loading}
+                    className={`btn-sheen group relative w-full overflow-hidden rounded-xl bg-[#F47C20] py-4 font-bold text-white shadow-xl shadow-orange-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-orange-500/30 ${
+                      status.loading ? "opacity-70 cursor-not-allowed" : ""
+                    }`}
                   >
                     <span className="relative z-10 inline-flex items-center justify-center gap-3">
-                      Submit Inquiry
+                      {status.loading ? "Sending..." : "Submit Inquiry"}
                       <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                     </span>
                   </button>
