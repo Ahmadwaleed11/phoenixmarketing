@@ -26,22 +26,22 @@ export const BRAND = {
 export const SOCIALS = [
   {
     name: "Facebook",
-    href: "https://facebook.com/",
+    href: "https://www.facebook.com/share/18hQtQ4gbz/?mibextid=wwXIfr",
     icon: FaFacebookF,
   },
   {
     name: "Instagram",
-    href: "https://instagram.com/",
+    href: "https://www.instagram.com/phoenix_marktingsolutions?igsh=MTcxdzZ2OTYzemtobA==",
     icon: FaInstagram,
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/",
+    href: "https://www.linkedin.com/company/phoenixmarketingsolutionuk/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BhbYVaJPKRNa7%2FrAcAf1c3Q%3D%3D",
     icon: FaLinkedinIn,
   },
   {
     name: "TikTok",
-    href: "https://tiktok.com/",
+    href: "https://www.tiktok.com/@phoenix.marketing8?_r=1&_t=ZS-963ekUoAnZv",
     icon: FaTiktok,
   },
   {
@@ -77,9 +77,9 @@ export const CONTACT = {
   phoneHref: "tel:+447469011915",
   emailDisplay: "info@phoenixmarketingsolution.uk",
   emailHref: "mailto:info@phoenixmarketingsolution.uk",
-  locationDisplay: "Manchester, United Kingdom",
+  locationDisplay: "London, United Kingdom",
   mapHref:
-    "https://www.google.com/maps/search/?api=1&query=Manchester%2C%20United%20Kingdom",
+    "https://www.google.com/maps/search/?api=1&query=London%2C%20United%20Kingdom",
   websiteDisplay: "www.phoenixmarketingsolution.uk",
   websiteHref: "https://phoenixmarketingsolution.uk",
 };
