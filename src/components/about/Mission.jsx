@@ -35,17 +35,21 @@ function MissionSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Left - Logo */}
-          <div className="flex flex-col items-center justify-center text-center">
-            <div className="relative">
-              <div className="absolute inset-0 bg-[var(--button-color)] opacity-20 blur-3xl rounded-full" />
-              <img
-                src={logoLarge}
-                alt="Phoenix Logo"
-                className="relative z-10 w-64 md:w-80 lg:w-96 h-auto drop-shadow-[0_0_30px_rgba(244,124,32,0.25)]"
-              />
+          <div className="rounded-3xl border border-gray-800 bg-gradient-to-b from-gray-900/60 to-gray-900/30 p-8 md:p-10 backdrop-blur-sm shadow-[0_25px_80px_rgba(0,0,0,0.35)]">
+            <div className="flex flex-col items-center justify-center text-center gap-6">
+              <div className="relative w-full max-w-md mx-auto overflow-hidden rounded-3xl">
+                <div className="absolute inset-0 bg-[var(--button-color)] opacity-20 blur-3xl" />
+                <img
+                  src={logoLarge}
+                  alt="Phoenix Logo"
+                  className="relative z-10 w-full h-auto rounded-3xl drop-shadow-[0_0_30px_rgba(244,124,32,0.25)]"
+                />
+              </div>
+              <div>
+                <h2 className="text-white text-2xl font-bold tracking-widest">PHOENIX</h2>
+                <p className="text-gray-400 text-sm tracking-[0.2em] mt-2">MARKETING SOLUTION</p>
+              </div>
             </div>
-            {/* <h2 className="text-white text-2xl font-bold tracking-widest mt-6">PHOENIX</h2>
-            <p className="text-gray-400 text-sm tracking-[0.2em]">MARKETING SOLUTION</p> */}
           </div>
 
           {/* Right - Mission Card */}
