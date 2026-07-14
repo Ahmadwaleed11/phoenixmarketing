@@ -1,13 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import imgBitcod from "./bitcod-production-image.jpg.jpeg";
+import imgEagle from "./eagle-motors-image.jpg.jpeg";
+import imgBio from "./bio-plus-image.jpg.jpeg";
+import imgComfy from "./comfytoe-image.jpg.jpeg";
+import imgSeleno from "./selenostones-landscaping-image.jpg.jpeg";
+import imgInphint from "./inphint-image.jpg.jpeg";
 
 const projects = [
-  { id: 1, title: "Business Name", category: "Social Media Marketing", image: "/src/components/home/bitcod-production-image.png" },
-  { id: 2, title: "Company Name", category: "Social Media Marketing", image: "src/components/home/eagle-motors-image.png" },
-  { id: 3, title: "Business Name", category: "Website Design", image: "/blog3.jpg" },
-  { id: 4, title: "Business Name", category: "SEO & PPC Campaign", image: "/blog4.jpg" },
-  { id: 5, title: "Business Name", category: "App UI/UX Design", image: "/blog5.jpg" },
-  { id: 6, title: "Business Name", category: "Website Development", image: "/blog6.jpg" },
+  { id: 1, title: "BITCOD Production", category: "Social Media Marketing", image: imgBitcod },
+  { id: 2, title: "Eagle Motors", category: "Social Media Marketing", image: imgEagle },
+  { id: 3, title: "BIO Plus", category: "Website Design", image: imgBio },
+  { id: 4, title: "Comfytoe", category: "SEO & PPC Campaign", image: imgComfy },
+  { id: 5, title: "Selenostones Landscaping", category: "App UI/UX Design", image: imgSeleno },
+  { id: 6, title: "Inphint", category: "Website Development", image: imgInphint },
 ];
 
 function Work() {
@@ -41,6 +47,11 @@ function Work() {
             >
               {/* Image Placeholder with overlay */}
               <div className="relative aspect-[4/3] w-full bg-gray-200 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
                 <div className="absolute inset-0 bg-[var(--button-color)]/0 group-hover:bg-[var(--button-color)]/10 transition-colors duration-300" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="bg-white/90 rounded-full p-3 transform scale-0 group-hover:scale-100 transition-transform duration-300 delay-100">
