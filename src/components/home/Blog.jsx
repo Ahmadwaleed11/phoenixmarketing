@@ -7,7 +7,7 @@ const blogs = [
     month: "May",
     title: "10 Social Media Tips to Boost Engagement",
     category: "Marketing",
-    image: "/blog1.jpg",
+    image: "src/components/home/10-social-media-tips-to-boost-engagement.jpg.jpeg",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const blogs = [
     month: "May",
     title: "SEO Strategies That Actually Work in 2024",
     category: "SEO",
-    image: "/blog2.jpg",
+    image: "src/components/home/seo-strategies-that-actually-work.jpg.jpeg",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const blogs = [
     month: "May",
     title: "How Paid Ads Can Grow Your Business",
     category: "Advertising",
-    image: "/blog3.jpg",
+    image: "src/components/home/how-paid-ads-can-grow-your-business (2).jpg.jpeg",
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ const blogs = [
     month: "June",
     title: "Content Marketing Trends to Follow",
     category: "Marketing",
-    image: "/blog4.jpg",
+    image: "src/components/home/content-marketing-trends-to-follow.jpg.jpeg",
   },
   {
     id: 5,
@@ -39,7 +39,7 @@ const blogs = [
     month: "May",
     title: "How Paid Ads Can Grow Your Business",
     category: "Advertising",
-    image: "/blog5.jpg",
+    image: "src/components/home/how-paid-ads-can-grow-your-business.jpg.jpeg",
   },
 ];
 
