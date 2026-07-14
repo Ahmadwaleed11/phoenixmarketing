@@ -38,7 +38,7 @@ function MissionSection() {
             <div className="relative">
               <div className="absolute inset-0 bg-[var(--button-color)] opacity-20 blur-3xl rounded-full" />
               <img
-                src="/logo-large.png"
+                src="logo-large.png"
                 alt="Phoenix Logo"
                 className="relative z-10 w-44 md:w-52 h-auto drop-shadow-[0_0_30px_rgba(244,124,32,0.25)]"
               />
