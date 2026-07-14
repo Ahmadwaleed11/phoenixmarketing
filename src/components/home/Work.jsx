@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const projects = [
   { id: 1, title: "Business Name", category: "Social Media Marketing", image: "../public/logo.png" },
-  { id: 2, title: "Company Name", category: "Social Media Marketing", image: "logo3.png" },
+  { id: 2, title: "Company Name", category: "Social Media Marketing", image: "/logo3.png" },
   { id: 3, title: "Business Name", category: "Website Design", image: "/blog3.jpg" },
   { id: 4, title: "Business Name", category: "SEO & PPC Campaign", image: "/blog4.jpg" },
   { id: 5, title: "Business Name", category: "App UI/UX Design", image: "/blog5.jpg" },
