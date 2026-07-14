@@ -19,7 +19,7 @@ const servicesData = [
       "Content pillars & calendars",
       "Community building & engagement"
     ],
-    chartImage: "/chart-social.jpg"
+    chartImage: "src/components/services/Card-09.png"
   },
   {
     icon: <MdOutlineSearch size={24} />,
@@ -30,7 +30,7 @@ const servicesData = [
       "Technical SEO audits",
       "Keywords & competitors research"
     ],
-    chartImage: "/chart-seo.jpg"
+    chartImage: "src/components/services/Card-09.png"
   },
   {
     icon: <MdOutlineWeb size={24} />,
@@ -41,7 +41,7 @@ const servicesData = [
       "Custom MERN builds",
       "Tailwind responsive apps"
     ],
-    chartImage: "/chart-web.jpg"
+    chartImage: "src/components/services/Card-09.png"
   },
   {
     icon: <MdOutlineEditNote size={24} />,
@@ -52,7 +52,7 @@ const servicesData = [
       "Brand visuals & graphics",
       "Editorial strategy"
     ],
-    chartImage: "/chart-content.jpg"
+    chartImage: "src/components/services/Card-09.png"
   },
   {
     icon: <MdOutlineAdsClick size={24} />,
@@ -63,7 +63,7 @@ const servicesData = [
       "Ad spend optimization",
       "Performance charts & reporting"
     ],
-    chartImage: "/chart-ads.jpg"
+    chartImage: "src/components/services/Card-09.png"
   },
   {
     icon: <MdOutlineAutoAwesome size={24} />,
@@ -74,7 +74,7 @@ const servicesData = [
       "Automated funnels",
       "AI chat & CRM integration"
     ],
-    chartImage: "/chart-automation.jpg"
+    chartImage: "src/components/services/Card-09.png"
   },
   {
     icon: <MdOutlineAutoAwesome size={24} />,
@@ -85,7 +85,7 @@ const servicesData = [
       "Reels, Shorts & TikTok videos",
       "Motion graphics & visual effects"
     ],
-    chartImage: "/chart-automation.jpg"
+    chartImage: "src/components/services/Card-09.png"
   },
   {
     icon: <MdOutlineAutoAwesome size={24} />,
@@ -96,7 +96,7 @@ const servicesData = [
       "Carousel & story designs",
       "Promotional & ad creatives"
     ],
-    chartImage: "/chart-automation.jpg"
+    chartImage: "src/components/services/Card-09.png"
   }
 ];
 
