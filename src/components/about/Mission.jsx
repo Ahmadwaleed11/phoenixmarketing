@@ -41,11 +41,11 @@ function MissionSection() {
               <img
                 src={logoLarge}
                 alt="Phoenix Logo"
-                className="relative z-10 w-44 md:w-52 h-auto drop-shadow-[0_0_30px_rgba(244,124,32,0.25)]"
+                className="relative z-10 w-64 md:w-80 lg:w-96 h-auto drop-shadow-[0_0_30px_rgba(244,124,32,0.25)]"
               />
             </div>
-            <h2 className="text-white text-2xl font-bold tracking-widest mt-6">PHOENIX</h2>
-            <p className="text-gray-400 text-sm tracking-[0.2em]">MARKETING SOLUTION</p>
+            {/* <h2 className="text-white text-2xl font-bold tracking-widest mt-6">PHOENIX</h2>
+            <p className="text-gray-400 text-sm tracking-[0.2em]">MARKETING SOLUTION</p> */}
           </div>
 
           {/* Right - Mission Card */}
