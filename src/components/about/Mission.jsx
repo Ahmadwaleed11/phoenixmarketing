@@ -10,19 +10,10 @@ function MissionSection() {
   ];
 
   return (
-    <section id="mission" className="relative w-full bg-black py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <style>{`
-        @keyframes pulseGlow {
-          0%,100% { opacity: .35; transform: translateY(0) scale(1); }
-          50% { opacity: .55; transform: translateY(-10px) scale(1.05); }
-        }
-        .pulseGlow { animation: pulseGlow 7s ease-in-out infinite; }
-      `}</style>
-
-      {/* Background glow */}
+    <section id="mission" className="relative w-full bg-[#050611] py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-24 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[var(--button-color)]/20 blur-[110px] pulseGlow" />
-        <div className="absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle_at_1px_1px,_rgba(244,124,32,0.22)_1px,_transparent_1px)] bg-[length:22px_22px]" />
+        <div className="absolute -top-24 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[var(--button-color)]/15 blur-[90px]" />
+        <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(circle_at_1px_1px,_rgba(244,124,32,0.12)_1px,_transparent_1px)] bg-[length:22px_22px]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl">
