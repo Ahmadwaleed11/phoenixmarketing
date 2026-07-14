@@ -13,7 +13,7 @@ function Navbar() {
         {/* Logo */}
         <Link to="/">
           <img 
-            src="/logo.png" 
+            src="logo.png" 
             alt="Logo" 
             className="h-16 transition-transform duration-300 hover:scale-105 cursor-pointer" 
           />
