@@ -62,10 +62,13 @@ function Hero() {
             </a>
             
             {/* Secondary Button with border animation */}
-            <button className="group h-12 px-7 text-[#334155] font-semibold border-2 border-gray-300 rounded-lg flex gap-4 justify-center items-center bg-white transition-all duration-300 hover:border-[#FF6600] hover:text-[#FF6600] hover:shadow-lg hover:-translate-y-1">
-              <a href="/portfolio"><span>View Porfolio</span></a>
+            <a
+              href="#work"
+              className="group h-12 px-7 text-[#334155] font-semibold border-2 border-gray-300 rounded-lg inline-flex gap-4 justify-center items-center bg-white transition-all duration-300 hover:border-[#FF6600] hover:text-[#FF6600] hover:shadow-lg hover:-translate-y-1"
+            >
+              <span>View Portfolio</span>
               <BsArrowRight size={22} className="transition-transform duration-300 group-hover:translate-x-2" />
-            </button>
+            </a>
           </div>
         </div>
 
