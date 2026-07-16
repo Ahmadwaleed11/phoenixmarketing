@@ -98,6 +98,17 @@ const servicesData = [
       "Promotional & ad creatives"
     ],
     chartImage: chartImage
+  },
+  {
+    icon: <MdOutlineAutoAwesome size={24} />,
+    title: "Influencers Marketing",
+    description: "Connect with the right creators to grow your brand and drive engagement.",
+    features: [
+      "Creator partnerships",
+      "Campaign strategy & management",
+      "Brand collaborations"
+    ],
+    chartImage: chartImage
   }
 ];
 
