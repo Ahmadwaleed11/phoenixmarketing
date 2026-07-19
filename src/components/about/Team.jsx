@@ -3,14 +3,14 @@ import React from "react";
 
 
 const teamMembers = [
-  { name: "Umair", role: "CEO & Founder", desc: "Visionary leader with a passion for innovation, strategic growth, and delivering exceptional digital solutions that help businesses thrive.", img: profilePicture, fallback: createAvatarSvg("Umair", "#1d4ed8") },
-  { name: "Mutahir", role: "Head of Growth", desc: "Leads regional operations with a focus on business growth, strategic partnerships, client success, and building high-performing teams.", img: saraImage, fallback: createAvatarSvg("Mutahir", "#7c3aed") },
-  { name: "Daniel Rivera", role: "Lead Engineer", desc: "Growth strategist with a decade in performance marketing", img: danielImage, fallback: createAvatarSvg("Daniel", "#0f766e") },
-  { name: "Ayaan Malik", role: "Creative Director", desc: "Growth strategist with a decade in performance marketing", img: ayaanImage, fallback: createAvatarSvg("Ayaan", "#b45309") },
-  { name: "Umair", role: "CEO & Founder", desc: "Growth strategist with a decade in performance marketing", img: umairImage, fallback: createAvatarSvg("Umair", "#dc2626") },
-  { name: "Sara Ahmad", role: "Head of Growth", desc: "Growth strategist with a decade in performance marketing", img: saraGrowthImage, fallback: createAvatarSvg("Sara", "#be185d") },
-  { name: "Daniel Rivera", role: "Lead Engineer", desc: "Growth strategist with a decade in performance marketing", img: profilePicture, fallback: createAvatarSvg("Daniel", "#2563eb") },
-  { name: "Ayaan Malik", role: "Creative Director", desc: "Growth strategist with a decade in performance marketing", img: profilePicture, fallback: createAvatarSvg("Ayaan", "#4f46e5") },
+  { name: "Umair Tariq", role: "CEO & Founder", desc: "Leadership • Strategic Planning • Business Development • Team Management • Decision Making • Financial Strategy • Operations Management • Supply Chain Management • Project Management" , img:'src/components/about/Profile Picture for booklet .PNG'},
+  { name: "Mutahir Ahmed Malik", role: "Country Manager", desc: "Skilled in strategic leadership, logistics & supply chain management, project management, business development, team leadership, operational excellence, and driving sustainable business growth.",img:'src/components/about/WhatsApp Image 2026-07-15 at 3.43.38 PM.jpeg'},
+  { name: "Hafsa Mubasher", role: "Operations Manager", desc: "Skilled in  Front-end development, operations management, supply chain coordination, project execution, KPI monitoring, budget planning, and team leadership with a focus on delivering high-quality software solutions.", img:'src/components/about/WhatsApp Image 2026-07-15 at 12.02.50 PM (1).jpeg'},
+  { name: "Ahmad waleed", role: "Manager", desc: "Skilled in Full stack development, Data Analysis , Python Developer, Project Management, with a focus on delivering high-quality software solutions, ensuring customer satisfaction, and driving business growth.",img:'src/components/about/WhatsApp Image 2026-07-15 at 12.02.50 PM (2).jpeg'},
+  { name: "Ali Akbar", role: "Admin and Complience Manager ", desc: "Skilled in overseeing administrative operations, ensuring regulatory compliance, managing documentation, mitigating risks, and implementing policies that support efficient and compliant business operations.", img:'src/components/about/WhatsApp Image 2026-07-15 at 12.02.50 PM.jpeg'},
+  { name: "Muhammad Zaid", role: "Social Media Manager", desc: "Skilled in Social Media Management, Content Strategy, Data Analysis and Project Management, with a focus on delivering high-quality, engaging campaigns that grow brands.",img:'src/components/about/WhatsApp Image 2026-07-15 at 12.02.51 PM.jpeg'},
+  { name: "Tehreem Fatima", role: "Social Media Manager", desc: "Skilled in Trend Research , content Scheduling , UI/UX designer, Community Management, Figma , Illustrator,Competitor Analysis, Brand Management, Audience Research , Influencer Collaboration", img:'src/components/about/WhatsApp Image 2026-07-15 at 12.02.51 PM (1).jpeg'},
+  { name: "Ayesha", role: "Content Writer", desc: "Content Writing , Trending Content Researcher , HTML , CSS , Team Coordination , Content Planning , Proofreading & Editing , Script Writing , Grammer & Language Proficiency , Blog Writing", img:'src/components/about/WhatsApp Image 2026-07-17 at 12.13.40 PM.jpeg'},
 ];
 
 function TeamSection() {
