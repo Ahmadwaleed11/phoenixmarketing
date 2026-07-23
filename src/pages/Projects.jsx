@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import Container from "../components/Container";
 import Chip from "../components/Chip";
 import CardProject from "../components/CardProject";
+import GraphicDesignCard from "../components/GraphicDesignCard";
 import { CATEGORIES, projects as allProjects } from "../constant/index";
 import PageTransition from "../components/common/PageTransition";
 
@@ -117,9 +118,13 @@ export default function Projects() {
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {pageItems.map((p) => (
-              <CardProject key={p.id} p={p} />
-            ))}
+            {pageItems.map((p) =>
+              p.category === "Graphic Design" ? (
+                <GraphicDesignCard key={p.id} p={p} />
+              ) : (
+                <CardProject key={p.id} p={p} />
+              )
+            )}
           </div>
 
           {/* pagination */}
